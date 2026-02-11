@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  width="24"
+  height="24"
+  shape-rendering="geometricPrecision"
+  text-rendering="geometricPrecision"
+  image-rendering="optimizeQuality"
+  vector-effect="non-scaling-stroke"
+>
+  <path
+    d="M13.293 6.293
+       C13.683 5.902 14.317 5.902 14.707 6.293
+       L19.707 11.293
+       C20.098 11.683 20.098 12.317 19.707 12.707
+       L14.707 17.707
+       C14.317 18.098 13.683 18.098 13.293 17.707
+       C12.902 17.317 12.902 16.683 13.293 16.293
+       L16.586 13
+       H4
+       C3.448 13 3 12.552 3 12
+       C3 11.448 3.448 11 4 11
+       H16.586
+       L13.293 7.707
+       C12.902 7.317 12.902 6.683 13.293 6.293Z"
+    fill="#2C2044"/>
+</svg>

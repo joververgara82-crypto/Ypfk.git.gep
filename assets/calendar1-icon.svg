@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="63"
+     height="63"
+     viewBox="0 0 24 24"
+     shape-rendering="geometricPrecision">
+
+  <path
+    d="M7 4C7 3.45 7.45 3 8 3C8.55 3 9 3.45 9 4V5H15V4C15 3.45 15.45 3 16 3C16.55 3 17 3.45 17 4V5H18C19.66 5 21 6.34 21 8V18C21 19.66 19.66 21 18 21H6C4.34 21 3 19.66 3 18V8C3 6.34 4.34 5 6 5H7V4ZM18 7H6C5.49 7 5.07 7.39 5 7.88V10H19V8C19 7.49 18.61 7.07 18.12 7H18ZM19 12H5V18C5 18.51 5.39 18.93 5.88 19H18C18.51 19 18.93 18.61 19 18.12V12Z"
+    fill="#69607B"
+    vector-effect="non-scaling-stroke"/>
+</svg>

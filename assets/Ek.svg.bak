@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 24 24">
+
+  <!-- Cuerpo del autobús (naranja) -->
+  <path d="M6 8C4.89543 8 4 8.89543 4 10V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V10C20 8.89543 19.1046 8 18 8H6Z" fill="#FFA74F"/>
+
+  <!-- Parte frontal inclinada (parabrisas + capó) -->
+  <path d="M18 8H20L17 14H18V8Z" fill="#B3592B"/>
+
+  <!-- Ventanas laterales (más grandes, con bordes redondeados) -->
+  <rect x="6" y="9.5" width="4.5" height="4" rx="1" fill="#B3592B"/>
+  <rect x="11.5" y="9.5" width="4.5" height="4" rx="1" fill="#B3592B"/>
+  <rect x="17" y="9.5" width="3" height="4" rx="1" fill="#B3592B"/>
+
+  <!-- Ruedas (negro con centro morado) -->
+  <circle cx="8" cy="19" r="2" fill="#22223B"/>
+  <circle cx="8" cy="19" r="0.75" fill="#B39DDB"/>
+
+  <circle cx="16" cy="19" r="2" fill="#22223B"/>
+  <circle cx="16" cy="19" r="0.75" fill="#B39DDB"/>
+
+</svg>
