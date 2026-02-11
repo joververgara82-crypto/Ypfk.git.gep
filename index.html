@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  
+    if (!localStorage.getItem('yape_clave')) {
+      window.location.replace('/login.html');
+    }
+  </script>
+
+  <link rel="icon" href="favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="manifest" href="manifest.json" />
+  <title>Yape App</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    html {
+      overflow: hidden;
+      height: 100%;
+    }
+    body{
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+      height: 100vh;
+      touch-action: manipulation;
+      overscroll-behavior-y: none;
+      position: relative;
+    }
+    button,
+    div,
+    input,
+    textarea,
+    select,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+  </style>
+</head>
+
+<body class="pantalla-ingresar-monto-activa">
+
+  
+  <div id="splash-screen" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #742384;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  ">
+    <img src="assets/+HEDJKKK-88WKK-81.svg" alt="Logo" style="
+      width: 25vw;
+      max-width: 100px;
+      height: auto;
+    ">
+  </div>
+
+  <div id="app-container"></div>
+
+  <div class="modal-confirmacion" id="modalEliminar">
+    <div class="contenido">
+      <h3>¿Eliminar movimiento?</h3>
+      <p>Esta acción no se puede deshacer.</p>
+      <div class="botones">
+        <button class="btn-si" id="btnEliminarSi">Eliminar</button>
+        <button class="btn-no" id="btnEliminarNo">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>

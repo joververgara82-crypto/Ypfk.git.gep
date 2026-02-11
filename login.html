@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const clave = localStorage.getItem('yape_clave');
+    if (clave) {
+      // Verificar formato mínimo antes de redirigir
+      const regex = /^[A-Z0-9]{4}-[A-Z0-9]{5}-[A-Z0-9]{7}-[A-Z0-9]{12}$/;
+      if (regex.test(clave)) {
+        window.location.replace('/index.html');
+      } else {
+        localStorage.removeItem('yape_clave');
+        alert('Clave inválida. Reiniciando...');
+      }
+    }
+  });
+</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso a Yape</title>
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #742384, #4b1971);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+  }
+
+  .login-container {
+    background: rgba(0, 0, 0, 1);
+    backdrop-filter: blur(10px);
+    border-radius: 5.13vw;
+    padding: 10.26vw;
+    width: 90vw;
+    max-width: 102.56vw;
+    text-align: center;
+    box-shadow: 0 2.56vw 7.69vw rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+
+  h1 {
+    margin-bottom: 6.41vw;
+    font-weight: 500;
+    font-size: 6.15vw;
+  }
+
+  .input-group {
+    margin-bottom: 5.13vw;
+  }
+
+  input {
+    width: 91%;
+    padding: 4.1vw;
+    border: none;
+    border-radius: 3.08vw;
+    background: rgba(255, 255, 255, 0.95);
+    font-size: 4.1vw;
+    text-align: center;
+    letter-spacing: 0.51vw;
+    font-weight: 500;
+    color: #333;
+    outline: none;
+  }
+
+  input::placeholder {
+    color: #aaa;
+  }
+
+  button {
+    width: 100%;
+    padding: 4.1vw;
+    background: #0FCBB3;
+    border: none;
+    border-radius: 3.08vw;
+    color: white;
+    font-size: 4.62vw;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background: #0da896;
+    transform: translateY(-0.51vw);
+  }
+
+  button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .error {
+    color: #ff6b6b;
+    margin-top: 3.85vw;
+    min-height: 5.13vw;
+    font-size: 3.59vw;
+  }
+
+  .logo {
+    width: 25.64vw;
+    margin-bottom: 5.13vw;
+  }
+
+  .footer {
+    margin-top: 7.69vw;
+    font-size: 3.08vw;
+    opacity: 0.8;
+  }
+
+  @media (min-width: 768px) {
+    .login-container {
+      max-width: 400px;
+      padding: 40px;
+      border-radius: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    input {
+      font-size: 16px;
+    }
+
+    button {
+      font-size: 18px;
+    }
+
+    .footer {
+      font-size: 12px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="login-container">
+    <img src="assets/Anonymous_emblem.svg.png" alt="Logo" class="logo">
+    <h1>Ingresa tu clave de acceso</h1>
+    <div class="input-group">
+      <input type="text" id="claveInput" placeholder="inserta tu clave" maxlength="30">
+    </div>
+    <button id="accederBtn">Acceder</button>
+    <div class="error" id="errorMensaje"></div>
+    <div class="footer">
+      Clave única por dispositivo • No compartas tu clave
+    </div>
+  </div>
+
+  <!-- Supabase JS Client -->
+  <script src="https://unpkg.com/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>
